@@ -1,0 +1,97 @@
+2023-10-01 13:33:03,190 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 28976 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 13:33:03,216 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 13:33:11,163 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 8.821 seconds (process running for 10.835)
+2023-10-01 13:33:12,216 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocacion a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 13:33:29,665 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 19092 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 13:33:29,703 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 13:33:37,647 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 8.828 seconds (process running for 10.898)
+2023-10-01 13:33:38,616 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocacion a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 13:33:54,530 INFO  c.d.d.m.c.MsvcCuentasApplication [main] Starting MsvcCuentasApplication v0.0.1-SNAPSHOT using Java 17.0.4.1 with PID 16488 (D:\Devsu\Test\msvc-devsu\msvc-cuentas\target\msvc-cuentas-0.0.1-SNAPSHOT.jar started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 13:33:54,551 INFO  c.d.d.m.c.MsvcCuentasApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 13:34:04,295 INFO  c.d.d.m.c.MsvcCuentasApplication [main] Started MsvcCuentasApplication in 10.595 seconds (process running for 12.046)
+2023-10-01 13:34:10,202 INFO  c.d.d.m.c.a.h.CuentaController [http-nio-8002-exec-1] Invocacion a crearCuenta() con numeroCuenta[125689]...
+2023-10-01 14:04:51,323 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 27748 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 14:04:51,368 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 14:04:59,744 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 9.459 seconds (process running for 13.231)
+2023-10-01 14:05:00,838 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 14:05:01,413 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a generarEstadoCuenta() con idCliente[30] en rangoFechas[20231001-20231001]...
+2023-10-01 14:05:01,421 INFO  c.d.d.m.c.a.h.CuentaController [main] Cliente obtenido: [Angel Reyes/43768048].
+2023-10-01 14:05:01,475 INFO  c.d.d.m.c.a.h.CuentaController [main] Obteniendo movimientos de cuenta [123456].
+2023-10-01 14:05:01,493 INFO  c.d.d.m.c.a.h.CuentaController [main] 2 Movimientos obtenidos en el rango indicado.
+2023-10-01 14:05:01,494 INFO  c.d.d.m.c.a.h.CuentaController [main] Enviando reporte...
+2023-10-01 14:05:21,805 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 25236 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 14:05:21,836 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 14:05:33,331 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 12.52 seconds (process running for 15.095)
+2023-10-01 14:05:34,433 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 14:05:34,947 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a generarEstadoCuenta() con idCliente[31] en rangoFechas[20231001-20231001]...
+2023-10-01 14:05:34,957 INFO  c.d.d.m.c.a.h.CuentaController [main] Cliente obtenido: [Angel Reyes/43768048].
+2023-10-01 14:05:35,026 INFO  c.d.d.m.c.a.h.CuentaController [main] Obteniendo movimientos de cuenta [123456].
+2023-10-01 14:05:35,041 INFO  c.d.d.m.c.a.h.CuentaController [main] 2 Movimientos obtenidos en el rango indicado.
+2023-10-01 14:05:35,041 INFO  c.d.d.m.c.a.h.CuentaController [main] Enviando reporte...
+2023-10-01 14:05:59,418 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 3152 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 14:05:59,451 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 14:06:06,965 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 8.359 seconds (process running for 10.398)
+2023-10-01 14:06:07,908 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 14:06:08,421 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a generarEstadoCuenta() con idCliente[32] en rangoFechas[20231001-20231001]...
+2023-10-01 14:06:08,433 INFO  c.d.d.m.c.a.h.CuentaController [main] Cliente obtenido: [Angel Reyes/43768048].
+2023-10-01 14:06:08,504 INFO  c.d.d.m.c.a.h.CuentaController [main] Obteniendo movimientos de cuenta [123456].
+2023-10-01 14:06:08,523 INFO  c.d.d.m.c.a.h.CuentaController [main] 2 Movimientos obtenidos en el rango indicado.
+2023-10-01 14:06:08,524 INFO  c.d.d.m.c.a.h.CuentaController [main] Enviando reporte...
+2023-10-01 14:06:40,318 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 6748 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 14:06:40,352 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 14:06:49,063 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 9.578 seconds (process running for 11.693)
+2023-10-01 14:06:50,325 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 14:06:50,955 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a generarEstadoCuenta() con idCliente[33] en rangoFechas[20231001-20231001]...
+2023-10-01 14:06:50,968 INFO  c.d.d.m.c.a.h.CuentaController [main] Cliente obtenido: [Angel Reyes/43768048].
+2023-10-01 14:06:51,049 INFO  c.d.d.m.c.a.h.CuentaController [main] Obteniendo movimientos de cuenta [123456].
+2023-10-01 14:06:51,070 INFO  c.d.d.m.c.a.h.CuentaController [main] 2 Movimientos obtenidos en el rango indicado.
+2023-10-01 14:06:51,071 INFO  c.d.d.m.c.a.h.CuentaController [main] Enviando reporte...
+2023-10-01 14:07:54,491 INFO  c.d.d.m.c.MsvcCuentasApplication [main] Starting MsvcCuentasApplication v0.0.1-SNAPSHOT using Java 17.0.4.1 with PID 23416 (D:\Devsu\Test\msvc-devsu\msvc-cuentas\target\msvc-cuentas-0.0.1-SNAPSHOT.jar started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 14:07:54,508 INFO  c.d.d.m.c.MsvcCuentasApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 14:08:04,647 INFO  c.d.d.m.c.MsvcCuentasApplication [main] Started MsvcCuentasApplication in 10.907 seconds (process running for 12.377)
+2023-10-01 17:09:22,280 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 4336 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 17:09:22,312 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 17:09:30,630 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 9.308 seconds (process running for 11.82)
+2023-10-01 17:09:31,692 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 17:10:30,069 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 31428 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 17:10:30,092 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 17:10:37,676 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 8.55 seconds (process running for 10.885)
+2023-10-01 17:10:38,673 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 17:13:31,876 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 7868 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 17:13:31,899 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 17:13:39,419 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 8.437 seconds (process running for 10.939)
+2023-10-01 17:13:40,426 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 17:17:17,470 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 2508 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 17:17:17,499 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 17:17:24,946 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 8.368 seconds (process running for 10.485)
+2023-10-01 17:17:25,920 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 17:19:35,513 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 25904 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 17:19:35,535 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 17:19:42,895 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 8.356 seconds (process running for 10.342)
+2023-10-01 17:19:43,882 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 17:24:44,436 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 24732 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 17:24:44,466 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 17:24:51,911 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 8.396 seconds (process running for 10.787)
+2023-10-01 17:24:52,854 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 17:24:53,362 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a generarEstadoCuenta() con idCliente[47] en rangoFechas[20231001-20231001]...
+2023-10-01 17:24:53,403 INFO  c.d.d.m.c.a.h.CuentaController [main] Cliente obtenido: [Angel Reyes/43768048].
+2023-10-01 18:07:19,680 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 5924 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 18:07:19,711 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 18:07:27,496 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 8.703 seconds (process running for 10.835)
+2023-10-01 18:07:28,572 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 18:07:28,659 INFO  c.d.d.m.c.a.h.CuentaController [main] Enviando a crear cuenta con numeroCuenta:123456
+2023-10-01 18:07:29,117 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a generarEstadoCuenta() con idCliente[49] en rangoFechas[20231001-20231001]...
+2023-10-01 18:07:29,151 INFO  c.d.d.m.c.a.h.CuentaController [main] Cliente obtenido: [Angel Reyes/43768048].
+2023-10-01 18:07:29,195 INFO  c.d.d.m.c.a.h.CuentaController [main] Obteniendo movimientos de cuenta [123456].
+2023-10-01 18:07:29,210 INFO  c.d.d.m.c.a.h.CuentaController [main] 2 Movimientos obtenidos en el rango indicado.
+2023-10-01 18:07:29,211 INFO  c.d.d.m.c.a.h.CuentaController [main] Enviando reporte...
+2023-10-01 18:09:52,529 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Starting MsvcCuentasApplicationTests using Java 17.0.4.1 with PID 29820 (started by David in D:\Devsu\Test\msvc-devsu\msvc-cuentas)
+2023-10-01 18:09:52,558 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 18:10:00,365 INFO  c.d.d.m.c.MsvcCuentasApplicationTests [main] Started MsvcCuentasApplicationTests in 8.873 seconds (process running for 10.909)
+2023-10-01 18:10:01,406 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a crearCuenta() con numeroCuenta[123456]...
+2023-10-01 18:10:01,516 INFO  c.d.d.m.c.a.h.CuentaController [main] Enviando a crear cuenta con numeroCuenta:123456
+2023-10-01 18:10:01,909 INFO  c.d.d.m.c.a.h.CuentaController [main] Invocación a generarEstadoCuenta() con idCliente[50] en rangoFechas[20231001-20231001]...
+2023-10-01 18:10:01,931 INFO  c.d.d.m.c.a.h.CuentaController [main] Cliente obtenido: [Angel Reyes/43768048].
+2023-10-01 18:10:01,971 INFO  c.d.d.m.c.a.h.CuentaController [main] Obteniendo movimientos de cuenta [123456].
+2023-10-01 18:10:01,987 INFO  c.d.d.m.c.a.h.CuentaController [main] 2 Movimientos obtenidos en el rango indicado.
+2023-10-01 18:10:01,988 INFO  c.d.d.m.c.a.h.CuentaController [main] Enviando reporte...
