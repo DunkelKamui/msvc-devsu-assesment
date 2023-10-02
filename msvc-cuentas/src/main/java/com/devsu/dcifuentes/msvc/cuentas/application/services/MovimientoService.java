@@ -1,8 +1,6 @@
 package com.devsu.dcifuentes.msvc.cuentas.application.services;
 
-import com.devsu.dcifuentes.msvc.cuentas.adapters.http.dto.CuentaDto;
 import com.devsu.dcifuentes.msvc.cuentas.adapters.http.dto.MovimientoDto;
-import com.devsu.dcifuentes.msvc.cuentas.application.ports.CuentaUseCase;
 import com.devsu.dcifuentes.msvc.cuentas.application.ports.MovimientoUseCase;
 import com.devsu.dcifuentes.msvc.cuentas.domain.entities.Cuenta;
 import com.devsu.dcifuentes.msvc.cuentas.domain.entities.Movimiento;
@@ -23,8 +21,8 @@ import java.util.stream.Collectors;
 
 @Service
 public class MovimientoService implements MovimientoUseCase {
-    private MovimientoRepository repository;
-    private CuentaRepository cuentaRepository;
+    private final MovimientoRepository repository;
+    private final CuentaRepository cuentaRepository;
 
     public MovimientoService(ApplicationContext applicationContext) {
         this.repository = applicationContext.getBean(MovimientoRepository.class);
@@ -33,7 +31,7 @@ public class MovimientoService implements MovimientoUseCase {
     @Override
     @Transactional(readOnly = true)
     public List<MovimientoDto> listar() {
-        List<MovimientoDto> result = ((List<Movimiento>) repository.findAll()).stream()
+        return ((List<Movimiento>) repository.findAll()).stream()
                 .map(movimiento -> new MovimientoDto(
                     movimiento.getId(),
                     movimiento.getFecha(),
@@ -42,14 +40,13 @@ public class MovimientoService implements MovimientoUseCase {
                     movimiento.getSaldo(),
                     movimiento.getCuenta().getNumeroCuenta()))
                 .collect(Collectors.toList());
-        return result;
     }
 
     @Override
     @Transactional(readOnly = true)
     public Optional<MovimientoDto> porId(Long id) {
         Optional<Movimiento> optionalMovimiento = repository.findById(id);
-        if(!optionalMovimiento.isPresent())
+        if(optionalMovimiento.isEmpty())
             throw new ResourceNotFoundException("Movimiento con Id " + id + " no encontrado.");
         Movimiento movimientoDb = optionalMovimiento.get();
         return Optional.of(convertToDto(movimientoDb));
@@ -60,11 +57,11 @@ public class MovimientoService implements MovimientoUseCase {
     public MovimientoDto guardar(MovimientoDto movimiento) throws ApiException {
 
         Optional<Cuenta> optionalCuenta = cuentaRepository.findById(movimiento.getNumeroCuenta());
-        if(!optionalCuenta.isPresent())
+        if(optionalCuenta.isEmpty())
             throw new ResourceNotFoundException("La cuenta " + movimiento.getNumeroCuenta() + " no existe");
 
         Cuenta cuentaDb = optionalCuenta.get();
-        Double nuevoSaldo = cuentaDb.getSaldoInicial() + movimiento.getValor();
+        double nuevoSaldo = cuentaDb.getSaldoInicial() + movimiento.getValor();
         // consulta saldo y actualizar la cuenta:
         if (nuevoSaldo < 0) {
             throw new BusinessException("Saldo no disponible.");
@@ -99,6 +96,48 @@ public class MovimientoService implements MovimientoUseCase {
 
     @Override
     @Transactional
+    public MovimientoDto actualizar(MovimientoDto movimiento, Double valorActual, Double saldoActual) throws ApiException {
+
+        Optional<Cuenta> optionalCuenta = cuentaRepository.findById(movimiento.getNumeroCuenta());
+        if(optionalCuenta.isEmpty())
+            throw new ResourceNotFoundException("La cuenta " + movimiento.getNumeroCuenta() + " no existe");
+
+        Cuenta cuentaDb = optionalCuenta.get();
+        double nuevoSaldo = cuentaDb.getSaldoInicial() - valorActual + movimiento.getValor();
+        // consulta saldo y actualizar la cuenta:
+        if (nuevoSaldo < 0) {
+            throw new BusinessException("Saldo no disponible.");
+        }
+
+        try {
+            cuentaDb.setSaldoInicial(nuevoSaldo);
+            cuentaRepository.save(cuentaDb);
+        } catch (Exception ae) {
+            throw new ApiException("No se pudo actualizar los saldos: " + ae.getMessage());
+        }
+
+        // Guardamos el movimiento
+        movimiento.setNumeroCuenta(cuentaDb.getNumeroCuenta());
+        movimiento.setFecha(Date.from(Instant.now()));
+        movimiento.setSaldo(saldoActual - valorActual + movimiento.getValor());
+        movimiento.setTipoMovimiento(movimiento.getTipoMovimiento());
+        movimiento.setValor(movimiento.getValor());
+
+        Movimiento movimientoEntity = getMovimiento(movimiento, cuentaDb);
+        movimientoEntity.setId(movimiento.getId());
+        try {
+            Movimiento movimientoDb = repository.save(movimientoEntity);
+            movimiento.setId(movimientoDb.getId());
+        } catch (Exception e){
+            cuentaDb.setSaldoInicial(saldoActual);
+            cuentaRepository.save(cuentaDb);
+            throw new ApiException("No se pudo registrar el movimiento. Error: " + e.getMessage());
+        }
+        return movimiento;
+    }
+
+    @Override
+    @Transactional
     public void eliminar(Long id) {
         repository.deleteById(id);
     }
@@ -106,7 +145,7 @@ public class MovimientoService implements MovimientoUseCase {
     @Override
     @Transactional(readOnly = true)
     public List<MovimientoDto> listarEstadoCuenta(String numeroCuenta, Date fechaIni, Date fechaFin) {
-        List<MovimientoDto> result = ((List<Movimiento>)repository.findByCuentaNumeroCuentaAndFechaGreaterThanEqualAndFechaLessThanEqual(numeroCuenta, fechaIni, fechaFin))
+        return ((List<Movimiento>)repository.findByCuentaNumeroCuentaAndFechaGreaterThanEqualAndFechaLessThanEqual(numeroCuenta, fechaIni, fechaFin))
                 .stream()
                 .map(movimiento -> new MovimientoDto(
                         movimiento.getId(),
@@ -116,7 +155,6 @@ public class MovimientoService implements MovimientoUseCase {
                         movimiento.getSaldo(),
                         movimiento.getCuenta().getNumeroCuenta()))
                 .collect(Collectors.toList());
-        return result;
     }
 
     private MovimientoDto convertToDto(Movimiento movimientoDb) {

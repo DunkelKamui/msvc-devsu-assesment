@@ -94,6 +94,29 @@ public class ClienteService implements ClienteUseCase {
 
     @Override
     @Transactional
+    public ClienteDto actualizar(ClienteDto clienteDto) throws ApiException {
+        Cliente clienteEntity = new Cliente();
+        // Al actualizar el DTO ya viene con el Id
+        clienteEntity.setId(clienteDto.getId());
+        clienteEntity.setNombre(clienteDto.getNombre());
+        clienteEntity.setGenero(clienteDto.getGenero());
+        clienteEntity.setEdad(clienteDto.getEdad());
+        clienteEntity.setIdentificacion(clienteDto.getIdentificacion());
+        clienteEntity.setDireccion(clienteDto.getDireccion());
+        clienteEntity.setTelefono(clienteDto.getTelefono());
+        clienteEntity.setContrasena(clienteDto.getContrasena());
+        clienteEntity.setEstado(clienteDto.isEstado());
+        try {
+            clienteEntity = repository.save(clienteEntity);
+            clienteDto.setId(clienteEntity.getId());
+        } catch (Exception e){
+            throw new ApiException("No se pudo actualizar el cliente. Error: " + e.getMessage());
+        }
+        return clienteDto;
+    }
+
+    @Override
+    @Transactional
     public void eliminar(Long id) {
         repository.deleteById(id);
     }

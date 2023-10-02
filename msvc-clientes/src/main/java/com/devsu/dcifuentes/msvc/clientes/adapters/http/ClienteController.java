@@ -99,11 +99,12 @@ public class ClienteController {
         clienteDb.setGenero(cliente.getGenero());
         clienteDb.setEdad(cliente.getEdad());
         clienteDb.setIdentificacion(cliente.getIdentificacion());
+        clienteDb.setDireccion(cliente.getDireccion());
         clienteDb.setTelefono(cliente.getTelefono());
         clienteDb.setEstado(cliente.isEstado());
         clienteDb.setContrasena(cliente.getContrasena());
-        logger.info(String.format("Se envía a guardar cliente con idCliente [%d]", optionalCliente.get().getId()));
-        return ResponseEntity.status(HttpStatus.CREATED).body(clienteUseCase.guardar(clienteDb));
+        logger.info(String.format("Se envía a guardar cliente con idCliente [%d]", clienteDb.getId()));
+        return ResponseEntity.status(HttpStatus.CREATED).body(clienteUseCase.actualizar(clienteDb));
     }
 
     @PatchMapping("/actualizarNombre/{id}/{nuevoNombre}")
@@ -116,7 +117,7 @@ public class ClienteController {
         ClienteDto clienteDb = optionalCliente.get();
         clienteDb.setNombre(nuevoNombre);
         logger.info(String.format("Se envía a actualizar cliente con idCliente [%d] con nombre [%s]", id, nuevoNombre));
-        return ResponseEntity.status(HttpStatus.CREATED).body(clienteUseCase.guardar(clienteDb));
+        return ResponseEntity.status(HttpStatus.CREATED).body(clienteUseCase.actualizar(clienteDb));
     }
 
     @DeleteMapping("/{id}")

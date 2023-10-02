@@ -11,6 +11,7 @@ public interface MovimientoUseCase {
     List<MovimientoDto> listar();
     Optional<MovimientoDto> porId(Long id);
     MovimientoDto guardar(MovimientoDto movimiento) throws ApiException;
+    MovimientoDto actualizar(MovimientoDto movimiento, Double valorActual, Double saldoActual) throws ApiException;
     void eliminar(Long id);
     List<MovimientoDto> listarEstadoCuenta(String numeroCuenta, Date fechaIni, Date fechaFin);
 }

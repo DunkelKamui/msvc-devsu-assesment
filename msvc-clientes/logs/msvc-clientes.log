@@ -84,3 +84,6 @@
 2023-10-01 14:06:50,965 INFO  c.d.d.m.c.a.h.ClienteController [http-nio-8001-exec-6] Devolviendo Ok con idCliente [33]
 2023-10-01 14:06:51,190 INFO  c.d.d.m.c.a.h.ClienteController [http-nio-8001-exec-7] Invocacion a método eliminarCliente...
 2023-10-01 14:06:51,206 INFO  c.d.d.m.c.a.h.ClienteController [http-nio-8001-exec-7] Cliente con idCliente [33] eliminado
+2023-10-01 20:34:28,061 INFO  c.d.d.m.c.MsvcClientesApplicationTests [main] Starting MsvcClientesApplicationTests using Java 17.0.4.1 with PID 25660 (started by David in D:\Devsu\Test\msvc-devsu\msvc-clientes)
+2023-10-01 20:34:28,089 INFO  c.d.d.m.c.MsvcClientesApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-01 20:34:33,833 INFO  c.d.d.m.c.MsvcClientesApplicationTests [main] Started MsvcClientesApplicationTests in 6.732 seconds (process running for 8.944)

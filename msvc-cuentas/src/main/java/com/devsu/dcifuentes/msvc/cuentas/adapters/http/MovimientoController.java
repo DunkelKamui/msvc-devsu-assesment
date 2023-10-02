@@ -55,20 +55,22 @@ public class MovimientoController {
         }
     }
 
-    @PutMapping("/{numeroCuenta}")
+    @PutMapping("/{id}")
     public ResponseEntity<?> editar(@RequestBody MovimientoDto movimiento, @PathVariable Long id) throws ApiException {
         Optional<MovimientoDto> optionalMovimiento = movimientoUseCase.porId(id);
         if (!optionalMovimiento.isPresent())
             throw new ResourceNotFoundException("El movimiento con ID " + id + " no existe.");
 
         MovimientoDto movimientoDb = optionalMovimiento.get();
+        Double valoractual = movimientoDb.getValor();
+        Double saldoActual = movimientoDb.getSaldo();
         movimientoDb.setNumeroCuenta(movimiento.getNumeroCuenta());
         movimientoDb.setFecha(movimiento.getFecha());
         movimientoDb.setSaldo(movimiento.getSaldo());
         movimientoDb.setTipoMovimiento(movimiento.getTipoMovimiento());
         movimientoDb.setValor(movimiento.getValor());
         try {
-            return ResponseEntity.status(HttpStatus.CREATED).body(movimientoUseCase.guardar(movimientoDb));
+            return ResponseEntity.status(HttpStatus.CREATED).body(movimientoUseCase.actualizar(movimientoDb, valoractual, saldoActual));
         } catch (Exception e) {
             throw new ApiException(e.getMessage());
         }
